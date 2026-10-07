@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>MedDonate — NGO Dashboard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,680&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="donor-dashboard.css">
-</head>
-<body>
-
-<div id="shell">
-  <!-- Top Navigation -->
-  <header class="top">
-    <a href="index.html" class="brand" title="Back to MedDonate Homepage">
-      <span class="mark">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-=======
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MedDonate — NGO / Clinic Dashboard</title>
@@ -35,126 +17,11 @@
     <a href="index.html" class="brand" title="Back to Home">
       <span class="mark">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
->>>>>>> 7674378a5562a9118507f8f10a1d5658434153fb
           <path d="M7 17L17 7M9.5 4.5L4.5 9.5C2.7 11.3 2.7 14.2 4.5 16C6.3 17.8 9.2 17.8 11 16L16 11C17.8 9.2 17.8 6.3 16 4.5C14.2 2.7 11.3 2.7 9.5 4.5Z" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
       </span>
       MedDonate
     </a>
-<<<<<<< HEAD
-
-    <div class="nav-right">
-      <div class="user-chip" id="userProfileChip" title="Click to view/edit NGO profile or log out">
-        <span class="user-avatar" id="userAvatar">N</span>
-        <span id="userNameDisplay">NGO</span>
-        <span style="font-size:0.75rem; color:var(--ink-soft); margin-left:3px;">✏️ Edit</span>
-      </div>
-      <button class="btn btn-ghost btn-sm" id="openChatBtn" title="Open messages with Donors">
-        💬 Messages <span class="badge badge-accepted" id="chatBadge" style="margin-left:4px; padding:2px 6px;">1</span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Welcome Banner -->
-  <section class="hero-banner">
-    <div>
-      <h1 id="welcomeHeading">Welcome, NGO!</h1>
-      <p>Review nearby unexpired medicines listed by donors. Accept donations, coordinate pickup, and update status once received.</p>
-    </div>
-  </section>
-
-  <!-- Statistics Counters -->
-  <section class="stats-grid">
-    <div class="stat-card">
-      <div class="val" id="statAvailable">0</div>
-      <div class="label">Available Nearby</div>
-    </div>
-    <div class="stat-card">
-      <div class="val" id="statAccepted" style="color:var(--gold-600);">0</div>
-      <div class="label">Accepted by Us</div>
-    </div>
-    <div class="stat-card">
-      <div class="val" id="statCompleted" style="color:var(--green-700);">0</div>
-      <div class="label">Handover Complete</div>
-    </div>
-  </section>
-
-  <!-- Section Header & Filters -->
-  <div class="section-header">
-    <h2>Available Donations &amp; Status</h2>
-    <div class="filter-pills">
-      <button class="filter-btn active" data-filter="available">Available</button>
-      <button class="filter-btn" data-filter="accepted">Accepted</button>
-      <button class="filter-btn" data-filter="completed">Completed</button>
-    </div>
-  </div>
-
-  <!-- Donations Grid -->
-  <div class="donations-grid" id="donationsContainer">
-    <!-- Rendered dynamically by JavaScript -->
-  </div>
-</div>
-
-<!-- ================= MODAL: EDIT PROFILE ================= -->
-<div class="modal-overlay" id="profileEditModal">
-  <div class="modal-content">
-    <div class="modal-head">
-      <div>
-        <h3>Edit NGO Profile</h3>
-        <p style="margin:0; font-size:0.8rem; color:var(--ink-soft);">Update organization details and contact info.</p>
-      </div>
-      <button class="close-btn" id="closeProfileModalBtn">&times;</button>
-    </div>
-
-    <form id="profileEditForm">
-      <div class="form-group">
-        <label for="editNgoName">Organization Name *</label>
-        <input type="text" id="editNgoName" required placeholder="NGO Name">
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="editRegNo">Registration/License No. *</label>
-          <input type="text" id="editRegNo" required placeholder="Reg No.">
-        </div>
-        <div class="form-group">
-          <label for="editPhone">Contact Phone *</label>
-          <input type="tel" id="editPhone" maxlength="10" required placeholder="10-digit mobile number">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="editCity">City *</label>
-          <input type="text" id="editCity" required placeholder="City">
-        </div>
-        <div class="form-group">
-          <label for="editAddress">Full Address *</label>
-          <input type="text" id="editAddress" required placeholder="Address">
-        </div>
-      </div>
-
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:22px; padding-top:16px; border-top:1px solid var(--line); flex-wrap:wrap; gap:10px;">
-        <button type="button" class="btn btn-danger btn-sm" id="logoutBtn" title="Log out from NGO account">
-          🚪 Log Out
-        </button>
-        <div style="display:flex; gap:10px;">
-          <button type="button" class="btn btn-ghost" id="cancelProfileBtn">Cancel</button>
-          <button type="submit" class="btn btn-primary">Save Changes</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- ================= MODAL: DONATION DETAILS ================= -->
-<div class="modal-overlay" id="donationDetailsModal">
-  <div class="modal-content">
-    <div class="modal-head">
-      <h3>Donation Details</h3>
-      <button class="close-btn" id="closeDonationModalBtn">&times;</button>
-    </div>
-    <div id="donationDetailsContent">
-      <!-- Rendered dynamically -->
-=======
     <div class="nav-right">
       <button class="btn btn-ghost btn-sm" id="openChatListBtn" title="Open donor messages">
         💬 Messages <span id="unreadBadge" class="badge badge-new" style="display:none; margin-left:4px; padding:2px 6px;">0</span>
@@ -302,57 +169,10 @@
     <div class="modal-foot">
       <button class="btn btn-ghost" id="cancelRejectBtn">Cancel</button>
       <button class="btn btn-danger" id="confirmRejectBtn">Decline & Notify Donor</button>
->>>>>>> 7674378a5562a9118507f8f10a1d5658434153fb
     </div>
   </div>
 </div>
 
-<<<<<<< HEAD
-<!-- ================= CHAT DRAWER / WINDOW ================= -->
-<div class="chat-drawer" id="chatDrawer">
-  <div class="chat-head">
-    <div class="chat-ngo-info">
-      <div class="chat-avatar" id="chatAvatar">D</div>
-      <div>
-        <h4 id="chatNgoName">Donor Name <span class="badge badge-accepted" style="font-size:0.65rem; padding:2px 6px;">Verified</span></h4>
-        <div class="chat-subhead" id="chatNgoSub">Pickup Location</div>
-      </div>
-    </div>
-    <button class="close-btn" id="closeChatBtn">&times;</button>
-  </div>
-
-  <div class="chat-med-context" id="chatMedContext">
-    <span>💊 Discussing: <strong id="chatMedName">Medicine Name</strong></span>
-    <span class="badge badge-accepted" id="chatStatusPill">Accepted</span>
-  </div>
-
-  <div class="chat-messages" id="chatMessages">
-    <!-- Messages injected dynamically -->
-  </div>
-
-  <div class="quick-replies" id="quickReplies">
-    <span class="quick-pill" data-msg="We will send our volunteer today between 5-7 PM">Volunteer today 5-7 PM</span>
-    <span class="quick-pill" data-msg="Our volunteer will come tomorrow morning">Volunteer tomorrow morning</span>
-    <span class="quick-pill" data-msg="Can you please confirm your address?">Confirm address</span>
-    <span class="quick-pill" data-msg="Thank you for your donation!">Thank you</span>
-  </div>
-
-  <form class="chat-input-area" id="chatForm">
-    <input type="text" id="chatInput" placeholder="Type a message to coordinate pickup..." autocomplete="off">
-    <button type="submit" class="chat-send-btn" title="Send message">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-  </form>
-</div>
-
-<!-- Toast element -->
-<div id="toast"></div>
-
-<script>
-(function() {
-  // Check auth
-  var ngoData = null;
-=======
 <!-- ===== CHAT DRAWER ===== -->
 <div class="chat-overlay" id="chatOverlay"></div>
 <div class="chat-drawer" id="chatDrawer">
@@ -423,237 +243,10 @@
   var lastLiveCheck = Date.now();
 
   // Load NGO org data from localStorage
->>>>>>> 7674378a5562a9118507f8f10a1d5658434153fb
   try {
     var raw = localStorage.getItem('meddonate_ngo');
     if (raw) ngoData = JSON.parse(raw);
   } catch(e) {}
-<<<<<<< HEAD
-  
-  if (!ngoData) {
-    window.location.href = 'ngo-login.html';
-    return;
-  }
-
-  // Set Profile UI
-  var nameStr = ngoData.ngoName || 'NGO Partner';
-  document.getElementById('userNameDisplay').textContent = nameStr;
-  document.getElementById('welcomeHeading').textContent = 'Welcome, ' + nameStr + '!';
-  document.getElementById('userAvatar').textContent = nameStr.charAt(0).toUpperCase();
-
-  // MOCK DONATIONS DATA
-  var ALL_DONATIONS = [
-    {
-      id: 'DON-901', name: 'Paracetamol 500mg', category: 'Tablets / Capsules', qty: '3 strips',
-      expiry: '2027-10-15', condition: 'Sealed blister / foil pack', location: 'South Delhi, Delhi',
-      donorName: 'Rahul', status: 'available'
-    },
-    {
-      id: 'DON-902', name: 'Augmentin 625 Duo', category: 'Tablets / Capsules', qty: '1 strip (10 tabs)',
-      expiry: '2026-05-20', condition: 'Sealed blister / foil pack', location: 'Dwarka, Delhi',
-      donorName: 'Priya', status: 'available'
-    },
-    {
-      id: 'DON-903', name: 'Benadryl Cough Syrup', category: 'Syrup / Liquid', qty: '1 bottle (150ml)',
-      expiry: '2028-02-10', condition: 'Unopened bottle with intact seal', location: 'Rohini, Delhi',
-      donorName: 'Amit', status: 'accepted'
-    },
-    {
-      id: 'DON-904', name: 'Volini Gel', category: 'Ointment / Cream', qty: '2 tubes',
-      expiry: '2025-11-30', condition: 'Box with tamper-proof seal', location: 'Noida',
-      donorName: 'Sneha', status: 'completed'
-    }
-  ];
-
-  // Try to load from localStorage if we modified statuses before
-  try {
-    var savedDonations = localStorage.getItem('meddonate_donations');
-    if (savedDonations) {
-      var parsed = JSON.parse(savedDonations);
-      // Merge statuses
-      ALL_DONATIONS.forEach(d => {
-        var found = parsed.find(p => p.id === d.id);
-        if (found) d.status = found.status;
-      });
-    }
-  } catch(e) {}
-
-  function saveDonations() {
-    try {
-      localStorage.setItem('meddonate_donations', JSON.stringify(ALL_DONATIONS));
-    } catch(e) {}
-  }
-
-  var currentFilter = 'available';
-
-  // Stats
-  function updateStats() {
-    var avail = ALL_DONATIONS.filter(d => d.status === 'available').length;
-    var acc = ALL_DONATIONS.filter(d => d.status === 'accepted').length;
-    var comp = ALL_DONATIONS.filter(d => d.status === 'completed').length;
-    
-    document.getElementById('statAvailable').textContent = avail;
-    document.getElementById('statAccepted').textContent = acc;
-    document.getElementById('statCompleted').textContent = comp;
-  }
-
-  function getStatusBadge(status) {
-    if (status === 'available') return '<span class="status-badge status-pending">Available</span>';
-    if (status === 'accepted') return '<span class="status-badge status-accepted">Accepted</span>';
-    if (status === 'completed') return '<span class="status-badge status-completed">Completed</span>';
-    return '';
-  }
-
-  function renderList() {
-    var container = document.getElementById('donationsContainer');
-    container.innerHTML = '';
-    
-    var filtered = ALL_DONATIONS.filter(d => d.status === currentFilter);
-    if (currentFilter === 'all') filtered = ALL_DONATIONS; // if we had an 'all' filter
-    
-    if (filtered.length === 0) {
-      container.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:40px; color:var(--ink-soft); background:var(--surface); border:1px dashed var(--line); border-radius:var(--radius-card);">No donations found in this status.</div>';
-      return;
-    }
-    
-    filtered.forEach(d => {
-      var card = document.createElement('div');
-      card.className = 'donation-card';
-      
-      var actionBtn = '';
-      if (d.status === 'available') {
-        actionBtn = '<button class="btn btn-primary btn-sm btn-block action-btn" data-action="accept" data-id="' + d.id + '" style="margin-top:14px;">Accept Donation</button>';
-      } else if (d.status === 'accepted') {
-        actionBtn = `
-          <div style="display:flex; gap:10px; margin-top:14px;">
-            <button class="btn btn-ghost btn-sm action-btn" data-action="chat" data-id="${d.id}" style="flex:1;">💬 Message</button>
-            <button class="btn btn-primary btn-sm action-btn" data-action="complete" data-id="${d.id}" style="flex:1;">✓ Received</button>
-          </div>
-        `;
-      }
-      
-      var badgeClass = d.status === 'available' ? 'badge-pending' : (d.status === 'accepted' ? 'badge-accepted' : 'badge-completed');
-      var badgeText = d.status === 'available' ? 'Available' : (d.status === 'accepted' ? 'Accepted' : 'Completed');
-
-      card.innerHTML = `
-        <div class="card-top">
-          <div style="display:flex; gap:12px; align-items:center;">
-            <div class="med-icon">💊</div>
-            <div>
-              <h3>${d.name}</h3>
-              <span style="font-size:0.78rem; color:var(--ink-soft);">${d.category} &bull; ${d.qty}</span>
-            </div>
-          </div>
-          <span class="badge ${badgeClass}">${badgeText}</span>
-        </div>
-
-        <div class="med-meta" style="margin-top:16px; margin-bottom:12px;">
-          <div class="med-meta-item"><span>📅 Expiry:</span> <strong>${d.expiry}</strong></div>
-          <div class="med-meta-item"><span>📍 Location:</span> ${d.location}</div>
-          <div class="med-meta-item"><span>👤 Donor:</span> ${d.donorName}</div>
-        </div>
-        
-        <div style="font-size:0.8rem; color:var(--ink-soft); margin-bottom:12px; background:var(--surface-2); padding:8px 12px; border-radius:6px; border:1px solid var(--line);">
-          <strong>Condition:</strong> ${d.condition}
-        </div>
-        
-        <div style="border-top:1px solid var(--line); padding-top:12px; margin-top:auto;">
-          ${actionBtn || '<div style="font-size:0.8rem; color:var(--green-700); text-align:center; font-weight:600;">✓ Handover Successful</div>'}
-        </div>
-      `;
-      container.appendChild(card);
-    });
-  }
-
-  function handleAction(action, id) {
-    var d = ALL_DONATIONS.find(x => x.id === id);
-    if (!d) return;
-    if (action === 'accept') {
-      d.status = 'accepted';
-    } else if (action === 'complete') {
-      d.status = 'completed';
-    } else if (action === 'chat') {
-      openChatForMed(d);
-      return; // Do not save or render list again
-    }
-    saveDonations();
-    updateStats();
-    renderList();
-  }
-
-  // Filter functionality
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      currentFilter = this.getAttribute('data-filter');
-      renderList();
-    });
-  });
-
-  // Action buttons
-  document.getElementById('donationsContainer').addEventListener('click', function(e) {
-    if (e.target.classList.contains('action-btn')) {
-      var action = e.target.getAttribute('data-action');
-      var id = e.target.getAttribute('data-id');
-      handleAction(action, id);
-    }
-  });
-
-  // Initial render
-  updateStats();
-  renderList();
-
-  // Profile Modal Logic
-  var profileModal = document.getElementById('profileEditModal');
-  
-  document.getElementById('userProfileChip').addEventListener('click', function() {
-    // populate
-    document.getElementById('editNgoName').value = ngoData.ngoName || '';
-    document.getElementById('editRegNo').value = ngoData.regNo || '';
-    document.getElementById('editPhone').value = ngoData.phone || '';
-    document.getElementById('editCity').value = ngoData.city || '';
-    document.getElementById('editAddress').value = ngoData.address || '';
-    profileModal.classList.add('open');
-  });
-
-  function closeProfileModal() { profileModal.classList.remove('open'); }
-  document.getElementById('closeProfileModalBtn').addEventListener('click', closeProfileModal);
-  document.getElementById('cancelProfileBtn').addEventListener('click', closeProfileModal);
-
-  document.getElementById('profileEditForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    ngoData.ngoName = document.getElementById('editNgoName').value.trim();
-    ngoData.regNo = document.getElementById('editRegNo').value.trim();
-    ngoData.phone = document.getElementById('editPhone').value.trim();
-    ngoData.city = document.getElementById('editCity').value.trim();
-    ngoData.address = document.getElementById('editAddress').value.trim();
-    
-    try {
-      localStorage.setItem('meddonate_ngo', JSON.stringify(ngoData));
-    } catch(e){}
-
-    // Update UI
-    var nameStr = ngoData.ngoName || 'NGO Partner';
-    document.getElementById('userNameDisplay').textContent = nameStr;
-    document.getElementById('welcomeHeading').textContent = 'Welcome, ' + nameStr + '!';
-    document.getElementById('userAvatar').textContent = nameStr.charAt(0).toUpperCase();
-
-    closeProfileModal();
-  });
-
-  // LOGOUT
-  document.getElementById('logoutBtn').addEventListener('click', function() {
-    try {
-      localStorage.removeItem('meddonate_ngo');
-    } catch(e){}
-    window.location.href = 'index.html';
-  });
-
-  // Toast notification
-  function toast(msg){
-    var t = document.getElementById('toast');
-=======
 
   // If no verified NGO, inject sample data
   if (!ngoData || !ngoData.org || !ngoData.org.name) {
@@ -754,161 +347,18 @@
   function toast(msg) {
     var t = document.getElementById('toast');
     if (!t) return;
->>>>>>> 7674378a5562a9118507f8f10a1d5658434153fb
     t.textContent = msg;
     t.classList.add('show');
     clearTimeout(t._h);
     t._h = setTimeout(function(){ t.classList.remove('show'); }, 2600);
   }
 
-<<<<<<< HEAD
-  function escapeHtml(s) {
-    return String(s || '').replace(/[&<>"']/g, function(c){
-=======
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
->>>>>>> 7674378a5562a9118507f8f10a1d5658434153fb
       return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
     });
   }
 
-<<<<<<< HEAD
-  // ================= CHAT SYSTEM =================
-  var STORAGE_KEY_CHAT = 'meddonate_chat_messages';
-  var chatDrawer = document.getElementById('chatDrawer');
-  var closeChatBtn = document.getElementById('closeChatBtn');
-  var chatMessages = document.getElementById('chatMessages');
-  var chatForm = document.getElementById('chatForm');
-  var chatInput = document.getElementById('chatInput');
-  var openChatNavBtn = document.getElementById('openChatBtn');
-  var currentActiveMed = null;
-
-  function loadChatMessages(medId){
-    var allChats = {};
-    try {
-      allChats = JSON.parse(localStorage.getItem(STORAGE_KEY_CHAT)) || {};
-    } catch(e){}
-
-    if (!allChats[medId]) {
-      // If donor hasn't chatted, NGO sees their own system welcome
-      allChats[medId] = [
-        {
-          sender: 'ngo',
-          text: 'Hello! We have reviewed and accepted your donation. We can send a verified clinic volunteer to pick it up. What time works best for you today or tomorrow?',
-          time: 'Just now'
-        }
-      ];
-      localStorage.setItem(STORAGE_KEY_CHAT, JSON.stringify(allChats));
-    }
-    return allChats[medId];
-  }
-
-  function saveChatMessage(medId, msgObj){
-    var allChats = {};
-    try {
-      allChats = JSON.parse(localStorage.getItem(STORAGE_KEY_CHAT)) || {};
-    } catch(e){}
-    if (!allChats[medId]) allChats[medId] = [];
-    allChats[medId].push(msgObj);
-    localStorage.setItem(STORAGE_KEY_CHAT, JSON.stringify(allChats));
-  }
-
-  function renderChat(medItem){
-    currentActiveMed = medItem;
-    var donorName = medItem.donorName || 'Donor';
-
-    document.getElementById('chatNgoName').innerHTML = escapeHtml(donorName) + ' <span class="badge badge-accepted" style="font-size:0.65rem; padding:2px 6px;">Verified Donor</span>';
-    document.getElementById('chatNgoSub').textContent = 'Pickup: ' + escapeHtml(medItem.location);
-    document.getElementById('chatAvatar').textContent = donorName.charAt(0);
-    document.getElementById('chatMedName').textContent = medItem.name;
-
-    var messages = loadChatMessages(medItem.id);
-    var html = '';
-    messages.forEach(function(m){
-      // From NGO perspective, donor is 'msg-ngo' (left side, grey) and NGO is 'msg-donor' (right side, green)
-      var isMe = m.sender === 'ngo';
-      html += '' +
-      '<div class="msg ' + (isMe ? 'msg-donor' : 'msg-ngo') + '">' +
-        '<div>' + escapeHtml(m.text) + '</div>' +
-        '<div class="msg-time">' + escapeHtml(m.time) + '</div>' +
-      '</div>';
-    });
-
-    chatMessages.innerHTML = html;
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
-
-  function openChatForMed(medItem){
-    renderChat(medItem);
-    chatDrawer.classList.add('open');
-    chatInput.focus();
-  }
-
-  openChatNavBtn.addEventListener('click', function(){
-    var acceptedItem = ALL_DONATIONS.find(function(d){ return d.status === 'accepted'; }) || ALL_DONATIONS.find(function(d){ return d.status === 'completed'; }) || ALL_DONATIONS[0];
-    if (acceptedItem) {
-      openChatForMed(acceptedItem);
-    } else {
-      toast('No donations available to chat about.');
-    }
-  });
-
-  closeChatBtn.addEventListener('click', function(){
-    chatDrawer.classList.remove('open');
-  });
-
-  function sendNgoMessage(text){
-    if (!text || !currentActiveMed) return;
-    var now = new Date();
-    var timeStr = now.getHours() + ':' + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
-
-    var ngoMsg = {
-      sender: 'ngo',
-      text: text,
-      time: timeStr
-    };
-    saveChatMessage(currentActiveMed.id, ngoMsg);
-    renderChat(currentActiveMed);
-
-    // Simulated Donor response
-    setTimeout(function(){
-      var donorReplies = [
-        "That works perfectly for me. Thank you!",
-        "Yes, my address is exactly as listed. You can ring the bell.",
-        "Sure, I'll keep the medicines ready at the door.",
-        "Great, see you then."
-      ];
-      var replyText = donorReplies[Math.floor(Math.random() * donorReplies.length)];
-      var replyNow = new Date();
-      var replyTime = replyNow.getHours() + ':' + (replyNow.getMinutes() < 10 ? '0' : '') + replyNow.getMinutes();
-
-      var donorMsg = {
-        sender: 'donor',
-        text: replyText,
-        time: replyTime
-      };
-      saveChatMessage(currentActiveMed.id, donorMsg);
-      renderChat(currentActiveMed);
-    }, 1200);
-  }
-
-  chatForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    var text = chatInput.value.trim();
-    if (!text) return;
-    chatInput.value = '';
-    sendNgoMessage(text);
-  });
-
-  // Quick reply pills
-  document.getElementById('quickReplies').addEventListener('click', function(e){
-    var pill = e.target.closest('.quick-pill');
-    if (!pill) return;
-    var msg = pill.getAttribute('data-msg');
-    sendNgoMessage(msg);
-  });
-
-=======
   function expiryDaysLeft(dateStr) {
     if (!dateStr) return 999;
     var exp = new Date(dateStr);
@@ -1609,7 +1059,6 @@
     }
   } catch(e) {}
 
->>>>>>> 7674378a5562a9118507f8f10a1d5658434153fb
 })();
 </script>
 </body>
